@@ -51,7 +51,10 @@ public class Calculator {
    * @throws IllegalArgumentException if the divisor is zero
    */
   public double divide(double a, double b) {
-    return b == 0 ? 0 : a / b;
+    if (b == 0) {
+      throw new IllegalArgumentException("Cannot divide by zero");
+    }
+    return a / b;
   }
 
   /**
